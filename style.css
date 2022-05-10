@@ -494,7 +494,7 @@ footer .social-links {
     }
 
     .col-a {
-        grid-area: a;
+        grid-area: A;
     }
 
     .col-b {
@@ -546,7 +546,7 @@ footer .social-links {
 
     nav#navigation .menu ul li a {
         color: var(--primary-color);
-        opacity: .7;
+        opacity: 0.7;
     }
 
     nav#navigation .menu a.button {
@@ -559,6 +559,7 @@ footer .social-links {
         border-radius: 4rem;
 
         color: var(--primary-color);
+
         font-weight: 700;
         font-size: 1.4rem;
         line-height: 1.8rem;
@@ -571,15 +572,65 @@ footer .social-links {
         color: white;
     }
 
+    nav#navigation.scroll .menu ul li a {
+        color: var(--brand-light-2);
+        opacity: 0.6;
+    }
+
+    nav#navigation.scroll .menu a.button {
+        border-color: white;
+        color: white;
+    }
+
+    nav#navigation .close-menu,
+    nav#navigation .open-menu,
+    nav#navigation .social-links {
+        display: none;
+    }
+
+    nav#navigation .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    nav#navigation .menu ul:nth-child(1) {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    nav#navigation .menu ul li a {
+        color: var(--primary-color);
+        opacity: 0.7;
+    }
+
+    nav#navigation .menu a.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2.4rem;
+
+        border: 1px solid var(--primary-color);
+        border-radius: 4rem;
+
+        color: var(--primary-color);
+
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+    }
+
     nav#navigation .menu a.button:hover {
         background-color: var(--primary-color);
         border: none;
         color: white;
     }
 
-    nav#navigation.scroll .meunu ul li a {
-        color: var(--brand-light-2-color);
-        opacity: .6;
+    nav#navigation.scroll .menu ul li a {
+        color: var(--brand-light-2);
+        opacity: 0.6;
     }
 
     nav#navigation.scroll .menu a.button {
@@ -588,7 +639,7 @@ footer .social-links {
     }
 
     nav#navigation .menu li a {
-        transition: opacity .4s;
+        transition: opacity 0.4s;
     }
 
     nav#navigation .menu li a.active,
@@ -597,27 +648,28 @@ footer .social-links {
         font-weight: 700;
     }
 
-    nav#navigation .menu li a:after {
+    nav#navigation .menu li a::after {
         content: '';
-        width: 0;
+        width: 0%;
         height: 2px;
         background-color: var(--primary-color);
 
         position: relative;
         bottom: -2rem;
-        left: -.5rem;
+        left: -0.5rem;
 
         display: block;
-        transition: width .2s;
+
+        transition: width 0.2s;
     }
 
-    nav#navigation.scroll .menu li a:after {
+    nav#navigation.scroll .menu li a::after {
         background-color: white;
     }
 
     nav#navigation .menu li a.active::after,
     nav#navigation .menu li a:hover::after {
-        padding-inline: .8rem;
+        padding-inline: 0.8rem;
         width: 100%;
     }
 
@@ -629,10 +681,11 @@ footer .social-links {
     nav#navigation.scroll .menu a.button.active,
     nav#navigation.scroll .menu a.button:hover {
         background-color: var(--primary-color);
-        filter: brightness(1.1);
+        filter: brightness(1.3);
         border: none;
     }
 
+    /* ------------------------------------------------------------- */
     #home::before {
         height: calc(96% - var(--nav-height));
     }
@@ -669,7 +722,7 @@ footer .social-links {
         gap: 0;
     }
 
-    #home .stats .stat + .stat {
+    #home .stats .stat+.stat {
         border-left: 1px solid var(--primary-color);
     }
 
@@ -718,7 +771,6 @@ footer .social-links {
     }
 
     /* ------------------------------------------------------------- */
-
     #contact .wrapper {
         grid-template-columns: 1fr 57.5rem;
         grid-template-areas: 'A B';
@@ -742,14 +794,12 @@ footer .social-links {
         align-self: center;
     }
 
-
     footer .col-b {
         align-self: center;
         justify-self: flex-end;
     }
 
     footer p {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
-
 }
